@@ -1,0 +1,8 @@
+{
+  "name": "Bot Shop",
+  "description": "Django for Telegram bots",
+  "image": "heroku/python",
+  "repository": "https://github.com/hiletroy/BotShop",
+  "keywords": ["python", "django" ],
+  "addons": [ "heroku-postgresql" ]
+}
