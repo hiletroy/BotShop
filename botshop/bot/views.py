@@ -1,5 +1,4 @@
-from telegrambot.bot_views.generic import TemplateCommandView, ListDetailCommandView, ListCommandView, \
-    DetailCommandView
+from telegrambot.bot_views.generic import TemplateCommandView
 
 class StartCommandView(TemplateCommandView):
     template_text = "bot/messages/command_start_text.txt"
