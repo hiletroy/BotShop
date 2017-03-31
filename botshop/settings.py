@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     'rest_framework',
-    'rest_framework.authtoken',
-    'permabots',
+#    'rest_framework.authtoken',
+    'telegrambot'
 ]
 
 MIDDLEWARE = [
@@ -105,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#site-id
-SITE_ID = 1
+SITE_ID = 2
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
@@ -143,3 +143,4 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #MICROBOT_WEBHOOK_DOMAIN = env('MICROBOT_WEBHOOK_DOMAIN', default=None)
 MICROBOT_WEBHOOK_DOMAIN = 'tranquil-lake-76341.herokuapp.com'
+TELEGRAM_BOT_HANDLERS_CONF = "bot.handlers"
