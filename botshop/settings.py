@@ -142,4 +142,4 @@ STATICFILES_DIRS = [
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #MICROBOT_WEBHOOK_DOMAIN = env('MICROBOT_WEBHOOK_DOMAIN', default=None)
-MICROBOT_WEBHOOK_DOMAIN = 'https://tranquil-lake-76341.herokuapp.com'
+MICROBOT_WEBHOOK_DOMAIN = 'tranquil-lake-76341.herokuapp.com'
