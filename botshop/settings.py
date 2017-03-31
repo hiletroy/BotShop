@@ -34,11 +34,15 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     # Disable Django's own staticfiles handling in favour of WhiteNoise, for
     # greater consistency between gunicorn and `./manage.py runserver`. See:
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'permabots',
 ]
 
 MIDDLEWARE = [
@@ -100,6 +104,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#site-id
+SITE_ID = 1
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
@@ -133,3 +140,6 @@ STATICFILES_DIRS = [
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+#MICROBOT_WEBHOOK_DOMAIN = env('MICROBOT_WEBHOOK_DOMAIN', default=None)
+MICROBOT_WEBHOOK_DOMAIN = 'https://tranquil-lake-76341.herokuapp.com'
