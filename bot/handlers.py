@@ -8,5 +8,3 @@ urlpatterns = [
     command('help', HelpCommandView.as_command_view()),
     unknown_command(UnknownCommandView.as_command_view())
 ]
-
-print "HANDLERS!!"
