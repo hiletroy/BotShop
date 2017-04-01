@@ -144,7 +144,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #MICROBOT_WEBHOOK_DOMAIN = env('MICROBOT_WEBHOOK_DOMAIN', default=None)
 MICROBOT_WEBHOOK_DOMAIN = 'tranquil-lake-76341.herokuapp.com'
-TELEGRAM_BOT_HANDLERS_CONF = "telegrambot.handlers"
+TELEGRAM_BOT_HANDLERS_CONF = "bot.handlers"
 
 LOGGING = {
     'version': 1,
