@@ -54,7 +54,7 @@ pynzb==0.1.0
 pyparsing==2.2.0
 PyRSS2Gen==1.1
 python-dateutil==2.6.0
-python-telegram-bot==3.2.0
+python-telegram-bot==5.3.0
 pytz==2016.10
 PyYAML==3.12
 rebulk==0.8.2
