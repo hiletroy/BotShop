@@ -194,3 +194,9 @@ LOGGING = {
     }
 }
 
+import sys
+sys.path.append("/Users/lexa/src/heroku/botshop")
+sys.path.append("/Users/lexa/src/heroku/botshop/bot")
+sys.path.append("/Users/lexa/src/heroku/botshop/botshop")
+#sys.path.append("/Users/lexa/src/heroku/botshop/telegrambot")
+
