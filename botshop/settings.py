@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    #'django.middleware.csrf.CsrfViewMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -195,8 +195,8 @@ LOGGING = {
 }
 
 import sys
-sys.path.append("/Users/lexa/src/heroku/botshop")
-sys.path.append("/Users/lexa/src/heroku/botshop/bot")
+#sys.path.append("/Users/lexa/src/heroku/botshop")
+#sys.path.append("/Users/lexa/src/heroku/botshop/bot")
 #sys.path.append("/Users/lexa/src/heroku/botshop/botshop")
 #sys.path.append("/Users/lexa/src/heroku/botshop/telegrambot")
 
