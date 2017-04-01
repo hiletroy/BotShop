@@ -22,11 +22,11 @@ def index(request):
     # from django.contrib.sites.models import Site
     # current_site = Site.objects.get_current()
     # url = 'https://' + current_site.domain + webhook
-    # url = 'https://tranquil-lake-76341.herokuapp.com/telegrambot/webhook/339030622:AAGk24GWW40hJBfqOxqvhdsUJMw94zu5O98'
+    url = 'https://tranquil-lake-76341.herokuapp.com/telegrambot/webhook/339030622:AAGk24GWW40hJBfqOxqvhdsUJMw94zu5O98'
     #url = 'https://tranquil-lake-76341.herokuapp.com/'
-    #bot = BotAPI('339030622:AAGk24GWW40hJBfqOxqvhdsUJMw94zu5O98')
+    bot = BotAPI('339030622:AAGk24GWW40hJBfqOxqvhdsUJMw94zu5O98')
     # #bot.handle(Update.de_json(request.data, bot))
-    #bot.setWebhook(webhook_url=url)
+    bot.setWebhook(webhook_url=url)
     logger.info(repr(request))
     print repr(request)
     sys.stdout.flush()

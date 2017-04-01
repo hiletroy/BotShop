@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
@@ -172,7 +172,7 @@ LOGGING = {
         },
         # 'request_handler': {
         #     'level':'DEBUG',
-        #     'class':'logging.handlers.RotatingFileHandler',
+        #     'css':'logging.handlers.RotatingFileHandler',
         #     'filename': 'logs/django_request.log',
         #     'maxBytes': 1024*1024*5, # 5 MB
         #     'backupCount': 5,
