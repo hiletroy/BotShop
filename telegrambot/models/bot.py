@@ -67,7 +67,11 @@ def set_api(sender, instance, **kwargs):
         webhook = reverse('telegrambot:webhook', kwargs={'token': instance.token})        
         from django.contrib.sites.models import Site
         current_site = Site.objects.get_current()
-        url = 'https://' + current_site.domain + webhook   
+        url = 'https://' + current_site.domain + webhook
+        logger = logging.getLogger('my_app_name.my_new_module')
+        logger.info(webhook)
+        logger.info("hook: %s " % str(url))
+        print url + '!!!!!!!!!!!!!!!!!'
     if instance.ssl_certificate:
         cert = instance.ssl_certificate.open()
     instance._bot.setWebhook(webhook_url=url, 
