@@ -8,12 +8,18 @@ from django.core.urlresolvers import reverse
 from telegrambot.models import Bot, AuthToken
 from telegram import Bot as BotAPI
 from django.utils.html import escape
+from django.conf import settings
+from telegrambot.handlers import HandlerResolver
 
 
 
 def index(request):
+    handlerconf = settings.TELEGRAM_BOT_HANDLERS_CONF
+    resolver = HandlerResolver(handlerconf)
+
     # r = requests.get('http://httpbin.org/status/418')
-    # print r.text
+    print repr(handlerconf)
+    print repr(resolver)
 
     # webhook = reverse('telegrambot:webhook', kwargs={'token': '339030622:AAGk24GWW40hJBfqOxqvhdsUJMw94zu5O98'})
     logger = logging.getLogger('my_app_name.my_new_module')
