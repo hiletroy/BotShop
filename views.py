@@ -13,7 +13,7 @@ def index(request):
     r = requests.get('http://httpbin.org/status/418')
     print r.text
 
-    webhook = reverse('telegrambot:webhook', kwargs={'token': '111111111111111111111111'})
+    webhook = reverse('telegrambot:webhook', kwargs={'token': '339030622:AAGk24GWW40hJBfqOxqvhdsUJMw94zu5O98'})
     logger = logging.getLogger('my_app_name.my_new_module')
     logger.info(webhook)
     logger.info("!!!!!!!!!!!!!!")
@@ -24,7 +24,7 @@ def index(request):
 
     bot = BotAPI('339030622:AAGk24GWW40hJBfqOxqvhdsUJMw94zu5O98')
     #bot.handle(Update.de_json(request.data, bot))
-    #bot.setWebhook(webhook_url=url)
+    bot.setWebhook(webhook_url=url)
     logger.info(url)
 
 
