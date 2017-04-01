@@ -27,7 +27,7 @@ def index(request):
     #bot = BotAPI('339030622:AAGk24GWW40hJBfqOxqvhdsUJMw94zu5O98')
     # #bot.handle(Update.de_json(request.data, bot))
     #bot.setWebhook(webhook_url=url)
-    logger.info(repr(request))
+    logger.info(dir(request))
     print repr(request)
     sys.stdout.flush()
     return HttpResponse(escape(repr(request)))
