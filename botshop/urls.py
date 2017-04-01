@@ -19,6 +19,6 @@ import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.index, name='index'),
+    #url(r'^$', bot.views.index, name='index'),
     url(r'^telegrambot/', include('telegrambot.urls', namespace="telegrambot")),
 ]

@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
 #    'rest_framework.authtoken',
-    'telegrambot'
+    'telegrambot',
+    'bot'
 ]
 
 MIDDLEWARE = [
@@ -143,11 +144,11 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #MICROBOT_WEBHOOK_DOMAIN = env('MICROBOT_WEBHOOK_DOMAIN', default=None)
 MICROBOT_WEBHOOK_DOMAIN = 'tranquil-lake-76341.herokuapp.com'
-TELEGRAM_BOT_HANDLERS_CONF = "botshop.handlers"
+TELEGRAM_BOT_HANDLERS_CONF = "telegrambot.handlers"
 
 LOGGING = {
     'version': 1,
-    'disable_existing_loggers': True
+    'disable_existing_loggers': True,
     'formatters': {
         'verbose': {
             'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
