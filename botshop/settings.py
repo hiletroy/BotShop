@@ -34,11 +34,16 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     # Disable Django's own staticfiles handling in favour of WhiteNoise, for
     # greater consistency between gunicorn and `./manage.py runserver`. See:
     # http://whitenoise.evans.io/en/stable/django.html#using-whitenoise-in-development
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    'rest_framework',
+#    'rest_framework.authtoken',
+    'telegrambot',
+    'bot'
 ]
 
 MIDDLEWARE = [
@@ -100,11 +105,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# See: https://docs.djangoproject.com/en/dev/ref/settings/#site-id
+SITE_ID = 1
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
-TIME_ZONE = 'UTC'
+LANGUAGE_CODE = 'en-au'
+TIME_ZONE = 'Australia/Melbourne'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
@@ -133,3 +141,64 @@ STATICFILES_DIRS = [
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+#MICROBOT_WEBHOOK_DOMAIN = env('MICROBOT_WEBHOOK_DOMAIN', default=None)
+MICROBOT_WEBHOOK_DOMAIN = 'tranquil-lake-76341.herokuapp.com'
+TELEGRAM_BOT_HANDLERS_CONF = "bot.handlers"
+SECURE_SSL_REDIRECT = True
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': True,
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+        'standard': {
+            'format': '%(asctime)s [%(levelname)s] %(name)s: %(message)s'
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose'
+        },
+        'default': {
+            'level':'DEBUG',
+            'class':'logging.handlers.RotatingFileHandler',
+            'filename': '/tmp/mylog.log',
+            'maxBytes': 1024*1024*5, # 5 MB
+            'backupCount': 5,
+            'formatter':'standard',
+        },
+        # 'request_handler': {
+        #     'level':'DEBUG',
+        #     'css':'logging.handlers.RotatingFileHandler',
+        #     'filename': 'logs/django_request.log',
+        #     'maxBytes': 1024*1024*5, # 5 MB
+        #     'backupCount': 5,
+        #     'formatter':'standard',
+        # },
+    },
+    'loggers': {
+        '': {
+            'handlers': ['console', 'default'],
+            'level': 'DEBUG',
+            'propagate': True
+        },
+        # 'django.request': {
+        #     'handlers': ['request_handler'],
+        #     'level': 'DEBUG',
+        #     'propagate': False
+        # },
+    }
+}
+
+import sys
+#sys.path.append("/Users/lexa/src/heroku/botshop")
+#sys.path.append("/Users/lexa/src/heroku/botshop/bot")
+#sys.path.append("/Users/lexa/src/heroku/botshop/botshop")
+#sys.path.append("/Users/lexa/src/heroku/botshop/telegrambot")
+
