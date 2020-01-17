@@ -1,7 +1,7 @@
 appdirs==1.4.3
 certifi==2017.1.23
 dj-database-url==0.4.2
-Django==1.10.27
+Django==1.11
 future==0.16.0
 gunicorn==19.7.1
 packaging==16.8
