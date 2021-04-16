@@ -15,7 +15,7 @@ click==6.7
 colorclass==2.2.0
 dj-database-url==0.4.2
 django>=1.11.27
-django-debug-toolbar==1.7
+django-debug-toolbar==1.11.1
 django-telegram-bot==0.6.0
 djangorestframework==3.9.1
 docutils==0.13.1
